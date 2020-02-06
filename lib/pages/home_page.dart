@@ -119,9 +119,10 @@ class _HomePageState extends State<HomePage> {
 
         if(contatoRecebido != null){
           if(contato != null )
-          {
+          { 
              await db.updateContato(contatoRecebido);
           }else{
+            // o problema tá aqui
              await db.insertContato(contatoRecebido);
           }
           _exibeTodosContatos();
